@@ -7,101 +7,101 @@ class TelefonoMovil
 {
 
 public:
-    //Constructores
-    TelefonoMovil();
-    TelefonoMovil(string ma, string mo, string p, string i);
-    TelefonoMovil(string ma, string mo, double p, int i);
-    // Getters y Setters
-    string getMarca();
-    void setMarca(string ma);
-    string getModelo();
-    void setModelo(string mo);
-    double getPrecio();
-    void setPrecio(double p);
-    int getInventario();
-    void setInventario(int i);
+	//Constructores
+	TelefonoMovil();
+	TelefonoMovil(string ma, string mo, string p, string i);
+	TelefonoMovil(string ma, string mo, double p, int i);
+	// Getters y Setters
+	string getMarca();
+	void setMarca(string ma);
+	string getModelo();
+	void setModelo(string mo);
+	double getPrecio();
+	void setPrecio(double p);
+	int getInventario();
+	void setInventario(int i);
 
-    // Return attributes
-    string getAttributes();
+	// Return attributes
+	string getAttributes();
 
 private:
-    //Propiedades
-    string marca, modelo;
-    double precio;
-    int inventario;
+	//Propiedades
+	string marca, modelo;
+	double precio;
+	int inventario;
 };
 
 TelefonoMovil::TelefonoMovil()
 {
-    marca = "Generica";
-    modelo = "basico";
-    precio = 50.00;
-    inventario = 0;
+	marca = "Generica";
+	modelo = "basico";
+	precio = 50.00;
+	inventario = 0;
 }
 
 TelefonoMovil::TelefonoMovil(string ma, string mo, string p, string i)
 {
-    marca = ma;
-    modelo = mo;
-    precio = stod(p);
-    inventario = stoi(i);
+	marca = ma;
+	modelo = mo;
+	precio = stod(p);
+	inventario = stoi(i);
 }
 
 TelefonoMovil::TelefonoMovil(string ma, string mo, double p, int i)
 {
-    marca = ma;
-    modelo = mo;
-    precio = p;
-    inventario = i;
+	marca = ma;
+	modelo = mo;
+	precio = p;
+	inventario = i;
 }
 
 string TelefonoMovil::getMarca()
 {
-    return this->marca;
+	return this->marca;
 }
 
 void TelefonoMovil::setMarca(string ma)
 {
-    this->marca = ma;
+	this->marca = ma;
 }
 
 string TelefonoMovil::getModelo()
 {
-    return this->modelo;
+	return this->modelo;
 }
 
 void TelefonoMovil::setModelo(string mo)
 {
-    this->modelo = mo;
+	this->modelo = mo;
 }
 
 double TelefonoMovil::getPrecio()
 {
-    return this->precio;
+	return this->precio;
 }
 
 void TelefonoMovil::setPrecio(double p)
 {
-    this->precio = p;
+	this->precio = p;
 }
 
 int TelefonoMovil::getInventario()
 {
-    return this->inventario;
+	return this->inventario;
 }
 
 void TelefonoMovil::setInventario(int i)
 {
-    this->inventario = i;
+	this->inventario = i;
 }
 
-// For some weird reason this has bugs
-    // Marca and Modelo seem to not mix well
-    // Must ask professor
-// string TelefonoMovil::getAttributes() {
-//     string p = to_string(getPrecio()); // precio
-//     string i = to_string(getInventario()); // inventario
-//     string attributes = getMarca() + getModelo() + p + i;
 
-//      return attributes;
-// }
+string TelefonoMovil::getAttributes() 
+{
+
+	string temp; // precio
+  
+	temp = marca + "\n";
+
+      return temp;
+}
